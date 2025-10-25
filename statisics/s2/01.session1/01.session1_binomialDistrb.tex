@@ -1,0 +1,81 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumerate}
+
+\begin{document}
+
+\title{Binomial Distribution: Concepts and Solved Examples}
+\author{}
+\date{}
+\maketitle
+
+\section*{Introduction to the Binomial Distribution}
+The binomial distribution is a discrete probability distribution that models the number of successes in a fixed number of independent trials. It is applicable when each trial has only two possible outcomes (success or failure) and the probability of success, $p$, is constant for every trial. A random variable $X$ that follows this distribution is denoted as $X \sim B(n, p)$, where $n$ is the number of trials and $p$ is the probability of success.
+
+\begin{enumerate}
+    \item \textbf{The Binomial Probability Formula}
+    This formula is used to calculate the probability of obtaining \textbf{exactly} $k$ successes in $n$ trials.
+    $$ P(X=k) = \binom{n}{k} p^k (1-p)^{n-k} $$
+    Here, $\binom{n}{k}$ is the binomial coefficient, which represents the number of ways to arrange the successes and failures. The term $p^k$ is the probability of getting $k$ successes, and $(1-p)^{n-k}$ is the probability of getting $n-k$ failures.
+
+    \subsection*{Solved Examples}
+    \begin{enumerate}[a)]
+        \item \textbf{Coin Toss:} A fair coin is tossed 6 times. What is the probability of getting exactly 4 heads?
+        
+        \textbf{Solution:} Here, $n=6$, $k=4$, and $p=0.5$.
+        $P(X=4) = \binom{6}{4} (0.5)^4 (1-0.5)^{6-4} = \frac{6!}{4!2!} \times (0.5)^4 \times (0.5)^2 = 15 \times 0.0625 \times 0.25 = 0.234375$.
+        
+        \item \textbf{Manufacturing Defects:} A factory produces light bulbs, with a 3\% defect rate. If a random sample of 10 bulbs is selected, what is the probability of finding exactly 2 defective bulbs?
+        
+        \textbf{Solution:} Here, $n=10$, $k=2$, and $p=0.03$.
+        $P(X=2) = \binom{10}{2} (0.03)^2 (1-0.03)^{10-2} = 45 \times (0.03)^2 \times (0.97)^8 \approx 45 \times 0.0009 \times 0.7837 \approx 0.03176$.
+    \end{enumerate}
+
+    \item \textbf{Cumulative Probabilities}
+    This concept is used to find the probability of a range of outcomes, such as "at most" or "at least" a certain number of successes. This requires summing the individual probabilities from the binomial probability formula.
+
+    \subsection*{Solved Examples}
+    \begin{enumerate}[a)]
+        \item \textbf{Customer Purchases:} The probability that a customer buys a new product is 0.2. If 5 customers enter the store, what is the probability that \textbf{at most} 1 of them buys the product?
+        
+        \textbf{Solution:} We need to find $P(X \le 1) = P(X=0) + P(X=1)$. Here, $n=5$ and $p=0.2$.
+        $P(X=0) = \binom{5}{0} (0.2)^0 (0.8)^5 = 1 \times 1 \times 0.32768 = 0.32768$.
+        $P(X=1) = \binom{5}{1} (0.2)^1 (0.8)^4 = 5 \times 0.2 \times 0.4096 = 0.4096$.
+        $P(X \le 1) = 0.32768 + 0.4096 = 0.73728$.
+        
+        \item \textbf{Medical Trials:} A new drug is successful 60\% of the time. If it is administered to 7 patients, what is the probability that it is successful for \textbf{at least} 6 of them?
+        
+        \textbf{Solution:} We need to find $P(X \ge 6) = P(X=6) + P(X=7)$. Here, $n=7$ and $p=0.6$.
+        $P(X=6) = \binom{7}{6} (0.6)^6 (0.4)^1 = 7 \times 0.046656 \times 0.4 \approx 0.1306$.
+        $P(X=7) = \binom{7}{7} (0.6)^7 (0.4)^0 = 1 \times 0.0279936 \times 1 \approx 0.02799$.
+        $P(X \ge 6) = 0.1306 + 0.02799 = 0.15859$.
+    \end{enumerate}
+
+    \item \textbf{Mean and Variance}
+    The mean and variance provide a statistical summary of the distribution without calculating every probability. The mean, or expected value, tells us the average number of successes we can anticipate. The variance measures the spread of the data around this mean.
+
+    \begin{itemize}
+        \item \textbf{Mean:} $ \mu = E(X) = np $
+        \item \textbf{Variance:} $ \sigma^2 = Var(X) = np(1-p) $
+        \item \textbf{Standard Deviation:} $ \sigma = \sqrt{np(1-p)} $
+    \end{itemize}
+
+    \subsection*{Solved Examples}
+    \begin{enumerate}[a)]
+        \item \textbf{Student Survey:} A survey finds that 70\% of students own a laptop. If a random sample of 200 students is taken, what is the expected number of students with laptops and the variance?
+        
+        \textbf{Solution:} Here, $n=200$ and $p=0.7$.
+        Mean: $\mu = 200 \times 0.7 = 140$.
+        Variance: $\sigma^2 = 200 \times 0.7 \times (1-0.7) = 200 \times 0.7 \times 0.3 = 42$.
+        
+        \item \textbf{Basketball Free Throws:} A basketball player has an 80\% free-throw success rate. If the player attempts 15 free throws in a game, what is the expected number of successful free throws and the standard deviation?
+        
+        \textbf{Solution:} Here, $n=15$ and $p=0.8$.
+        Mean: $\mu = 15 \times 0.8 = 12$.
+        Variance: $\sigma^2 = 15 \times 0.8 \times (1-0.8) = 15 \times 0.8 \times 0.2 = 2.4$.
+        Standard Deviation: $\sigma = \sqrt{2.4} \approx 1.55$.
+    \end{enumerate}
+\end{enumerate}
+
+\end{document}

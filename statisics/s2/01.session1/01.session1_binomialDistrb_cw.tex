@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in} % Set page margins
+\usepackage{fancyhdr} % For header/footer
+\pagestyle{fancy}
+\fancyhead[L]{Pearson Edexcel IAL Statistics 2}
+\fancyhead[R]{Chapter 1: Binomial Distributions}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\begin{document}
+
+\centerline{\Large\textbf{Classwork: Chapter 1 - Binomial Distributions}}
+\centerline{\textbf{Pearson Edexcel International A Level Statistics 2}}
+\vspace{0.5cm}
+
+\textbf{Instructions:} Answer all questions, showing clear working where appropriate. You may use a calculator, and refer to binomial cumulative distribution tables (if provided, e.g., on pages 139-143 of the Student Book [1, 2]) for cumulative probabilities where applicable.
+
+\vspace{0.5cm}
+
+\begin{enumerate}
+    \item \textbf{Understanding the Binomial Distribution Definition and Conditions}
+    A random variable $X$ is said to follow a binomial distribution, denoted as $X \sim B(n, p)$.
+    \begin{enumerate}
+        \item State the four conditions that a random variable must satisfy for it to be modeled by a binomial distribution [28 (point 1)].
+        \item A company manufactures electronic components. A sample of 20 components is randomly selected and tested for defects. Explain why the number of defective components in this sample can be modeled by a binomial distribution, stating any assumptions made [17 (Q3, Q7a, Q8a), 22 (Q9a), 28 (point 1)].
+    \end{enumerate}
+
+    \item \textbf{Calculating Probabilities using the Binomial Probability Formula}
+    Let $X$ be a random variable such that $X \sim B(10, 0.3)$.
+    \begin{enumerate}
+        \item Calculate $P(X = 4)$ using the binomial probability formula, showing your working [15, 16 (Example 1a)].
+        \item A student guesses the answers to a multiple-choice test with 8 questions, each having 4 options, only one of which is correct. Let $Y$ be the number of correct answers. Find the probability that the student guesses exactly 3 questions correctly [16 (Example 1b)].
+    \end{enumerate}
+
+    \item \textbf{Working with Cumulative Probabilities}
+    A biased coin is tossed 15 times. The probability of landing a head in a single toss is $0.6$. Let $H$ be the number of heads obtained.
+    \begin{enumerate}
+        \item Find the probability of obtaining no more than 7 heads, i.e., $P(H \le 7)$ [19 (phrase interpretation), 21 (Q1a)].
+        \item Find the probability of obtaining at least 10 heads, i.e., $P(H \ge 10)$. You may use the identity $P(H \ge x) = 1 - P(H \le x-1)$ and binomial cumulative distribution tables or a calculator function [19 (phrase interpretation), 21 (Q2b)].
+    \end{enumerate}
+
+    \item \textbf{Calculating Mean and Variance of a Binomial Distribution}
+    For a random variable $X \sim B(25, 0.4)$.
+    \begin{enumerate}
+        \item Calculate the mean (expected value) of $X$, $E(X)$, using the appropriate formula [23 (Example 7), 28 (point 3)].
+        \item Calculate the variance of $X$, $Var(X)$, and the standard deviation of $X$ [23 (Example 7), 28 (point 3)].
+    \end{enumerate}
+
+    \item \textbf{Problem-Solving and Real-World Applications}
+    A manufacturer states that $15\%$ of its light bulbs are faulty. A quality control inspector randomly selects 12 light bulbs from a large batch.
+    \begin{enumerate}
+        \item State the distribution of the number of faulty light bulbs, $F$, in the sample, including its parameters [17 (Q5a)].
+        \item Find the probability that there are exactly 2 faulty light bulbs in the sample [17 (Q5b)].
+    \end{enumerate}
+
+    \item \textbf{Finding Unknown Parameters}
+    A random variable $X$ follows a binomial distribution $B(n, p)$.
+    \begin{enumerate}
+        \item Given that $E(X) = 6$ and $n=20$, find the value of $p$ [24 (Q2)].
+        \item Given that $E(X) = 4.8$ and $Var(X) = 2.88$, find the values of $n$ and $p$ [25 (Q5)].
+    \end{enumerate}
+
+    \item \textbf{Comprehensive Problem-Solving / Justification (Exam-style)}
+    A market research firm conducts a telephone survey. From past experience, the probability that a randomly chosen person will answer the phone and complete the survey is $0.2$. A researcher makes 15 calls.
+    \begin{enumerate}
+        \item Let $S$ be the number of people who answer the phone and complete the survey. State two assumptions that are necessary to model $S$ using a binomial distribution and explain why these assumptions might be reasonable in this context [17 (Q3, Q7a, Q8a), 22 (Q9a), 28 (point 1)].
+        \item Find the probability that the researcher completes at least 3 but fewer than 6 surveys, i.e., $P(3 \le S < 6)$ [19 (phrase interpretation), 21 (Q2c)].
+    \end{enumerate}
+\end{enumerate}
+
+\end{document}
