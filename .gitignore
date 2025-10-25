@@ -1,0 +1,18 @@
+# Ignore log files
+*.log
+
+# Ignore build outputs
+*.zip
+*.tar.gz
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# Ignore user-specific settings
+*.swp
+*.swo
+
+# Ignore generated folders
+__pycache__/
+*.pyc
